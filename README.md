@@ -3,7 +3,9 @@ TouchID Login Test
 
 
 /**
+
 iphone已录制的指纹基本验证
+
 */
 
 /**
@@ -11,6 +13,8 @@ iphone已录制的指纹基本验证
 连续错误3次将只能密码登录，两次连续打开app，无间断5次错误将存在一段时间无法进行touchid验证
 
 /**
+
+
                                   
                                   // 用户未提供有效证书,(3次机会失败 --身份验证失败)。
                                    LAErrorAuthenticationFailed = kLAErrorAuthenticationFailed,
@@ -32,6 +36,7 @@ iphone已录制的指纹基本验证
                                    
                                    // 身份验证无法启动,因为没有登记的手指触摸ID。 没有设置指纹密码时。
                                    LAErrorTouchIDNotEnrolled   = kLAErrorTouchIDNotEnrolled,
+                                   
                                    
 **/
                                    

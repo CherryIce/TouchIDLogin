@@ -8,6 +8,8 @@
 
 #import "AppDelegate.h"
 
+#import "LonginViewController.h"
+
 @interface AppDelegate ()
 
 @end
@@ -17,6 +19,18 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+
+    /**
+     方便每次进入app都可以去登录页面认证
+     */
+    [[NSUserDefaults standardUserDefaults] setObject:@"no" forKey:@"token"];
+
+    self.vc = [[ViewController alloc] init];
+    UINavigationController * nav = [[UINavigationController alloc] initWithRootViewController:self.vc];
+    self.window.rootViewController = nav;
+    self.window.backgroundColor = [UIColor whiteColor];
+    [self.window makeKeyAndVisible];
+    
     return YES;
 }
 

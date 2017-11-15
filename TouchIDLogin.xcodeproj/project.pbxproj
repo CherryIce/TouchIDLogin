@@ -15,6 +15,9 @@
 		8FF870AC1FBBEB2B00EE813A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FF870AB1FBBEB2B00EE813A /* main.m */; };
 		8FF870B61FBBEB2B00EE813A /* TouchIDLoginTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FF870B51FBBEB2B00EE813A /* TouchIDLoginTests.m */; };
 		8FF870C11FBBEB2C00EE813A /* TouchIDLoginUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FF870C01FBBEB2C00EE813A /* TouchIDLoginUITests.m */; };
+		8FF870D11FBBEB6800EE813A /* LonginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FF870CF1FBBEB6800EE813A /* LonginViewController.m */; };
+		8FF870D21FBBEB6800EE813A /* LonginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8FF870D01FBBEB6800EE813A /* LonginViewController.xib */; };
+		8FF870D71FBC08B700EE813A /* KeychainItemWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FF870D61FBC08B700EE813A /* KeychainItemWrapper.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +54,12 @@
 		8FF870BC1FBBEB2C00EE813A /* TouchIDLoginUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TouchIDLoginUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FF870C01FBBEB2C00EE813A /* TouchIDLoginUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TouchIDLoginUITests.m; sourceTree = "<group>"; };
 		8FF870C21FBBEB2C00EE813A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8FF870CE1FBBEB6800EE813A /* LonginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LonginViewController.h; sourceTree = "<group>"; };
+		8FF870CF1FBBEB6800EE813A /* LonginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LonginViewController.m; sourceTree = "<group>"; };
+		8FF870D01FBBEB6800EE813A /* LonginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LonginViewController.xib; sourceTree = "<group>"; };
+		8FF870D51FBC08B700EE813A /* KeychainItemWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeychainItemWrapper.h; sourceTree = "<group>"; };
+		8FF870D61FBC08B700EE813A /* KeychainItemWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeychainItemWrapper.m; sourceTree = "<group>"; };
+		8FF870D91FBC090F00EE813A /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +94,7 @@
 				8FF870B41FBBEB2B00EE813A /* TouchIDLoginTests */,
 				8FF870BF1FBBEB2C00EE813A /* TouchIDLoginUITests */,
 				8FF8709A1FBBEB2B00EE813A /* Products */,
+				8FF870D81FBC090F00EE813A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,6 +111,8 @@
 		8FF8709B1FBBEB2B00EE813A /* TouchIDLogin */ = {
 			isa = PBXGroup;
 			children = (
+				8FF870D41FBC08AA00EE813A /* KeyChain */,
+				8FF870D31FBBEB6E00EE813A /* Login */,
 				8FF8709C1FBBEB2B00EE813A /* AppDelegate.h */,
 				8FF8709D1FBBEB2B00EE813A /* AppDelegate.m */,
 				8FF8709F1FBBEB2B00EE813A /* ViewController.h */,
@@ -130,6 +142,33 @@
 				8FF870C21FBBEB2C00EE813A /* Info.plist */,
 			);
 			path = TouchIDLoginUITests;
+			sourceTree = "<group>";
+		};
+		8FF870D31FBBEB6E00EE813A /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				8FF870CE1FBBEB6800EE813A /* LonginViewController.h */,
+				8FF870CF1FBBEB6800EE813A /* LonginViewController.m */,
+				8FF870D01FBBEB6800EE813A /* LonginViewController.xib */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		8FF870D41FBC08AA00EE813A /* KeyChain */ = {
+			isa = PBXGroup;
+			children = (
+				8FF870D51FBC08B700EE813A /* KeychainItemWrapper.h */,
+				8FF870D61FBC08B700EE813A /* KeychainItemWrapper.m */,
+			);
+			path = KeyChain;
+			sourceTree = "<group>";
+		};
+		8FF870D81FBC090F00EE813A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8FF870D91FBC090F00EE813A /* Security.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -241,6 +280,7 @@
 				8FF870A91FBBEB2B00EE813A /* LaunchScreen.storyboard in Resources */,
 				8FF870A61FBBEB2B00EE813A /* Assets.xcassets in Resources */,
 				8FF870A41FBBEB2B00EE813A /* Main.storyboard in Resources */,
+				8FF870D21FBBEB6800EE813A /* LonginViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,6 +308,8 @@
 				8FF870A11FBBEB2B00EE813A /* ViewController.m in Sources */,
 				8FF870AC1FBBEB2B00EE813A /* main.m in Sources */,
 				8FF8709E1FBBEB2B00EE813A /* AppDelegate.m in Sources */,
+				8FF870D71FBC08B700EE813A /* KeychainItemWrapper.m in Sources */,
+				8FF870D11FBBEB6800EE813A /* LonginViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -431,12 +473,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = LGN7SU938D;
+				DEVELOPMENT_TEAM = V3WGXX8M8S;
 				INFOPLIST_FILE = TouchIDLogin/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.qianft.TouchIDLogin;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -445,12 +487,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = LGN7SU938D;
+				DEVELOPMENT_TEAM = V3WGXX8M8S;
 				INFOPLIST_FILE = TouchIDLogin/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.qianft.TouchIDLogin;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
